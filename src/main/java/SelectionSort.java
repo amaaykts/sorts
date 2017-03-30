@@ -10,7 +10,7 @@ public class SelectionSort {
      * @return отсортированный массив
      */
     public static int[] sort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {    //повторяем -1 раз, самый первый элемент на array.length -1 шагу будет самым маленьким
+        for (int i = 0; i < array.length - 1; i++) {    
             int min = minimalElementIndex(i, array);
             swap(i, min, array);
         }
