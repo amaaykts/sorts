@@ -24,5 +24,8 @@ public class SortsDemo {
         sort = InsertionSort.sort(array);   //Сортируем массив
         System.out.println("Insertion sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
 
+        sort = QuickSort.sort(array);   //Сортируем массив
+        System.out.println("Quick sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
+
     }
 }
