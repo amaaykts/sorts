@@ -41,4 +41,21 @@ public class InsertionSort {
         }
         array[k] = current; //присваиваем значение нашего элемента
     }
+
+    /**
+     * Сдвигаем элементы
+     *
+     * @param array           массив в котором будут сдвигаться элементы
+     * @param currentPosition позиция элемента который нужно поставить на своё место
+     */
+    private static void moveElementsArrayCopy(int array[], int currentPosition) {
+        int current = array[currentPosition];  //сохраняем значение во временную переменную
+        int k = currentPosition;   //записываем индекс в переменную
+
+        while (k != 0 && (current < array[k - 1])) {    //пока курсор не находится на последней позиции в массиве и пока наш элемент меньше предыдущего
+            k--;    //сдвигаем курсор
+        }
+        System.arraycopy(array, k, array, k + 1, currentPosition - k);
+        array[k] = current; //присваиваем значение нашего элемента
+    }
 }

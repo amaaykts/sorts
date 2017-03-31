@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Random;
 
 
@@ -19,5 +20,9 @@ public class SortsDemo {
 
         sort = SelectionSort.sort(array);   //Сортируем массив
         System.out.println("Selection sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
+
+        sort = InsertionSort.sort(array);   //Сортируем массив
+        System.out.println("Insertion sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
+
     }
 }
