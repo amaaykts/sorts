@@ -29,25 +29,19 @@ public class MergeSort {
         int[] result = new int[a.length + b.length];
         int firstCursor = 0;
         int secondCursor = 0;
-        int resultCursor = 0;
 
-        for (int i = 0; i < a.length + b.length; i++) {
+        for (int i = 0; i < result.length; i++) {
             if (firstCursor == a.length) {
-                result[resultCursor] = b[secondCursor];
-                secondCursor++;
+                result[i] = b[secondCursor++];
             } else if (secondCursor == b.length) {
-                result[resultCursor] = a[firstCursor];
-                firstCursor++;
+                result[i] = a[firstCursor++];
             } else {
                 if (a[firstCursor] < b[secondCursor]) { //если первый элемент меньше второго
-                    result[resultCursor] = a[firstCursor];
-                    firstCursor++;
+                    result[i] = a[firstCursor++];
                 } else {
-                    result[resultCursor] = b[secondCursor];
-                    secondCursor++;
+                    result[i] = b[secondCursor++];
                 }
             }
-            resultCursor++;
         }
         return result;
     }
