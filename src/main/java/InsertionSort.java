@@ -48,6 +48,21 @@ public class InsertionSort {
      * @param array           массив в котором будут сдвигаться элементы
      * @param currentPosition позиция элемента который нужно поставить на своё место
      */
+    private static void moveElementsFor(int array[], int currentPosition) {
+        int current = array[currentPosition];  //сохраняем значение во временную переменную
+        int k = currentPosition;
+        for (; (k != 0 && current < array[k - 1]); k--) {
+            array[k] = array[k - 1];    //сдвигаем предыдущий вперед
+        }
+        array[k] = current; //присваиваем значение нашего элемента
+    }
+
+    /**
+     * Сдвигаем элементы
+     *
+     * @param array           массив в котором будут сдвигаться элементы
+     * @param currentPosition позиция элемента который нужно поставить на своё место
+     */
     private static void moveElementsArrayCopy(int array[], int currentPosition) {
         int current = array[currentPosition];  //сохраняем значение во временную переменную
         int k = currentPosition;   //записываем индекс в переменную
