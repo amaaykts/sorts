@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class SortsDemo {
     public static void main(String[] args) {
-        int[] array = new int[11]; //Массив на 11 символов
+        int[] array = new int[5]; //Массив на 10 символов
         generateArray(array);
         int[] arrayBuble = Arrays.copyOf(array, array.length);
         int[] arraySelection = Arrays.copyOf(array, array.length);
@@ -30,7 +30,7 @@ public class SortsDemo {
 
         sort = QuickSort.sort(arrayQuick);   //Сортируем массив
         System.out.println("Quick sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
-
+        arrayMerge = new int[]{7,1};
         sort = MergeSort.sort(arrayMerge);   //Сортируем массив
         System.out.println("Merge sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
 
