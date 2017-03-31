@@ -30,7 +30,7 @@ public class SortsDemo {
 
         sort = QuickSort.sort(arrayQuick);   //Сортируем массив
         System.out.println("Quick sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
-        arrayMerge = new int[]{7,1};
+        
         sort = MergeSort.sort(arrayMerge);   //Сортируем массив
         System.out.println("Merge sort = " + Arrays.toString(sort));  //Печатаем отсортированный массив
 
